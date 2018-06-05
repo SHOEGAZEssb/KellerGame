@@ -27,6 +27,6 @@
     /// Removes the current <see cref="IBuilding"/>
     /// from the <see cref="Building"/> slot.
     /// </summary>
-    void RemoveBuilding();
+    IBuilding RemoveBuilding();
   }
 }
