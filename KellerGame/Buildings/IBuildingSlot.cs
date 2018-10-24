@@ -4,7 +4,7 @@
   /// Interface for an object that holds
   /// an <see cref="IBuilding"/>.
   /// </summary>
-  public interface IBuildingSlot
+  public interface IBuildingSlot : ISimulatable
   {
     /// <summary>
     /// Currently placed <see cref="IBuilding"/>.

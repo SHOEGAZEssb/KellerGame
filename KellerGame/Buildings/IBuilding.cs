@@ -3,7 +3,7 @@
   /// <summary>
   /// Interface for a building.
   /// </summary>
-  public interface IBuilding
+  public interface IBuilding : ISimulatable
   {
     /// <summary>
     /// Price of this building.

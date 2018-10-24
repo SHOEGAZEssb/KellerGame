@@ -112,5 +112,25 @@ namespace KellerGame.Test.BuildingTests
       // then: InvalidOperationException
       Assert.That(() => slot.RemoveBuilding(), Throws.InvalidOperationException);
     }
+
+    /// <summary>
+    /// Tests the simulation of a building in the building slot.
+    /// </summary>
+    [Test]
+    public void SimulateTest()
+    {
+      // given: SmallBuildingSlot with building mock
+      Mock<IBuilding> buildingMock = new Mock<IBuilding>(MockBehavior.Strict);
+      buildingMock.Setup(b => b.Simulate());
+
+      SmallBuildingSlot slot = new SmallBuildingSlot();
+      slot.PlaceBuilding(buildingMock.Object);
+
+      // when: simulating the slot
+      slot.Simulate();
+
+      // then: building was simulated
+      Assert.That(() => buildingMock.Verify(b => b.Simulate(), Times.Once), Throws.Nothing);
+    }
   }
 }

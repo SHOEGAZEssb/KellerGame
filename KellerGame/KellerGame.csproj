@@ -46,6 +46,7 @@
     <Compile Include="Buildings\ICapProducingBuilding.cs" />
     <Compile Include="Buildings\SmallBuildingSlot.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="ISimulatable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
